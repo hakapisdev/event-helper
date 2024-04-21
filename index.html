@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPOVII DAUN</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+</head>
+<body>
+<div class="stars"></div>
+<div class="container">
+    <div class="title">
+        <h2 class="title-text">ESCOBAR CLIENT</h2>
+    </div>
+    <div class="buttons">
+        <button class="profile-button" onclick="openProfile('profile2.html')">
+            <p>Profile</p>
+        </button>
+        <button class="purchase-button" onclick="openLink('https://nursultan.fun')">
+            <i class="fas fa-shopping-cart"></i> <!-- Font Awesome shopping cart icon -->
+            <p>Purchase client</p>
+        </button>
+        <button class="tech-support-button" onclick="openLink('https://www.youtube.com/hakapis')">
+            <p>Tech support</p>
+        </button>
+    </div>
+</div>
+<script>
+    function openLink(url) {
+        var buttons = document.querySelectorAll('.buttons button');
+        buttons.forEach(function(button) {
+            button.classList.add('zoom-out');
+            setTimeout(function() {
+                window.location.href = url;
+            }, 300);
+        });
+    }
+
+    function openProfile(url) {
+        window.location.href = url;
+    }
+</script>
+</body>
+</html>
